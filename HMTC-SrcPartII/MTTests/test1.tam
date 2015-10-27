@@ -1,0 +1,26 @@
+        LOADLB      0 2                 
+        LOADL       9                   
+        LOADL       1                   
+        LOADL       2                   
+        LOAD        [SB + 2]            
+        LOADL       1                   
+        ADD                             
+        MUL                             
+        ADD                             
+        STORE       [SB + 0]            
+        LOADL       3                   
+        LOADL       2                   
+        GTR                             
+        JUMPIFZ     #0                  
+        LOADL       3                   
+        JUMP        #1                  
+#0:
+        LOADL       3                   
+#1:
+        LOADL       1                   
+        ADD                             
+        STORE       [SB + 1]            
+        LOAD        [SB + 0]            
+        CALL        putint              
+        POP         0 3                 
+        HALT                            
